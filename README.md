@@ -1,2 +1,0 @@
-# CountriesList
-Desafio de programação
