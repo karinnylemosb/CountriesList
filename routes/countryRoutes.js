@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var countriesController = require('../controllers/countryController');
+let express = require('express');
+let router = express.Router();
+let countriesController = require('../controllers/countryController');
 
 
 router.get("/",  countriesController.getCountries );

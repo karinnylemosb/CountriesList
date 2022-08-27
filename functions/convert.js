@@ -6,9 +6,9 @@ module.exports.convertToXslx = (data) => {
     console.log("Criando o arquivo xlsx ...");    
     const headingColumnNames = ["Name","Capital","Area","Currencies"];
     
-    ws.cell(1,1).string("Countries List").style({font: {bold: true, size: 16, vertAlign: 'center',
+    ws.cell(1,1,1,4,true).string("Countries List").style({font: {bold: true, size: 16, vertAlign: 'center',
             color:'#4F4F4F'}, alignment: {horizontal: 'center', vertical: 'center'}});
-    ws.cell(1,1,1,4,true);
+    
 
     let headingColumnIndex =1; 
 
@@ -28,7 +28,7 @@ module.exports.convertToXslx = (data) => {
         rowIndex++;
     });
 
-wb.write("Countries.xlsx") 
-console.log("Arquivo gerado!");
+wb.write("countries.xlsx"); 
+
 
 }

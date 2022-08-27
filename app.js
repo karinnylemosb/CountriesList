@@ -2,12 +2,12 @@ const express = require("express");
 const bodyParserErrorHandler = require('express-body-parser-error-handler');
 const app =  express();
 const router = require("./routes/countryRoutes");
+global.__basedir = __dirname;
 
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(bodyParserErrorHandler());
-
 const port = process.env.PORT || 8080;
 
 app.use(express.json());
